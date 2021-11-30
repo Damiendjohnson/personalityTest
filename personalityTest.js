@@ -462,11 +462,11 @@ var splash = function(){
 var questionOne = function(){
     background(130, 225, 255);
     textSize(25);
-    text("Question "+ scene, 50,25);
-    text("A:", 65,65);
-    text("B:", 65,95);
-    text("C:", 65,125);
-    text("D:", 65,155);
+    text("What type are you? "+ scene, 50,25);
+    text("Fire type:", 65,65);
+    text("Water type:", 65,95);
+    text("Earth type:", 65,125);
+    text("Electric type:", 65,155);
     btnOneOne.draw();
     btnOneTwo.draw();
     btnOneThree.draw();
@@ -475,11 +475,11 @@ var questionOne = function(){
 var questionTwo = function(){
     background(130, 225, 255);
     textSize(25);
-    text("Question "+ scene, 50,25);
-    text("A:", 65,65);
-    text("B:", 65,95);
-    text("C:", 65,125);
-    text("D:", 65,155);
+    text(" Choose a color? "+ scene, 50,25);
+    text("Red:", 65,65);
+    text("Yellow:", 65,95);
+    text("Blue :", 65,125);
+    text("Green:", 65,155);
     btnTwoOne.draw();
     btnTwoTwo.draw();
     btnTwoThree.draw();
