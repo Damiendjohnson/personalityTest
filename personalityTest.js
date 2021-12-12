@@ -3,7 +3,7 @@ var scene = 0; //0 for splash, 1-10 for questions, 11 for results, 12 for leader
 var quiz = 0; // 0 for pokemon, 1 and 2 TBA
 var leaderBoard = [];// array which records results of tests since the start of program
 var answerArray =[];// array for storing answers during a test
-var index = 0;
+var index = 0;// index of an array, helps when shuffling the question array
 var questionArray = [1,2,3,4,5,6,7,8,9,10];//array for order of questions
 
 //objects
@@ -1645,14 +1645,12 @@ draw= function() {
 
 mouseClicked = function() {
     if(scene === 0){
-        println(scene+"     "+questionArray);
     btnStart0.handleMouseClick();
     btnStart1.handleMouseClick();
     btnStart2.handleMouseClick();
     }
     //question 1
     else if(scene === 1){
-        println(scene+"     "+questionArray);
     btnOneOne.handleMouseClick();
     btnOneTwo.handleMouseClick();
     btnOneThree.handleMouseClick();
@@ -1660,7 +1658,6 @@ mouseClicked = function() {
     }
     //question 2
     else if(scene === 2){
-        println(scene+"     "+questionArray);
     btnTwoOne.handleMouseClick();
     btnTwoTwo.handleMouseClick();
     btnTwoThree.handleMouseClick();
@@ -1668,7 +1665,6 @@ mouseClicked = function() {
     }
     //question 3
     else if(scene === 3){
-        println(scene+"     "+questionArray);
     btnThreeOne.handleMouseClick();
     btnThreeTwo.handleMouseClick();
     btnThreeThree.handleMouseClick();
@@ -1676,7 +1672,6 @@ mouseClicked = function() {
     }
     //question 4
     else if(scene === 4){
-        println(scene+"     "+questionArray);
     btnFourOne.handleMouseClick();
     btnFourTwo.handleMouseClick();
     btnFourThree.handleMouseClick();
@@ -1684,7 +1679,6 @@ mouseClicked = function() {
     }
     //question 5
     else if(scene === 5){
-        println(scene+"     "+questionArray);
     btnFiveOne.handleMouseClick();
     btnFiveTwo.handleMouseClick();
     btnFiveThree.handleMouseClick();
@@ -1692,7 +1686,6 @@ mouseClicked = function() {
     }
     //question 6
     else if(scene === 6){
-        println(scene+"     "+questionArray);
     btnSixOne.handleMouseClick();
     btnSixTwo.handleMouseClick();
     btnSixThree.handleMouseClick();
@@ -1700,7 +1693,6 @@ mouseClicked = function() {
     }
     //question 7
     else if(scene === 7){
-        println(scene+"     "+questionArray);
     btnSevenOne.handleMouseClick();
     btnSevenTwo.handleMouseClick();
     btnSevenThree.handleMouseClick();
@@ -1708,7 +1700,6 @@ mouseClicked = function() {
     }
     //question 8
     else if(scene === 8){
-        println(scene+"     "+questionArray);
     btnEightOne.handleMouseClick();
     btnEightTwo.handleMouseClick();
     btnEightThree.handleMouseClick();
@@ -1716,7 +1707,6 @@ mouseClicked = function() {
     }
     //question 9
     else if(scene === 9){
-        println(scene+"     "+questionArray);
     btnNineOne.handleMouseClick();
     btnNineTwo.handleMouseClick();
     btnNineThree.handleMouseClick();
@@ -1724,7 +1714,6 @@ mouseClicked = function() {
     }
     //question 10
     else if(scene === 10){
-        println(scene+"     "+questionArray);
     btnTenOne.handleMouseClick();
     btnTenTwo.handleMouseClick();
     btnTenThree.handleMouseClick();
@@ -1732,7 +1721,6 @@ mouseClicked = function() {
     }
     //results
     else if(scene === 11){
-        println(scene+"     "+questionArray);
     btnMainMenu.handleMouseClick();
     }
 };
