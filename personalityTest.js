@@ -3,7 +3,7 @@ var scene = 0; //0 for splash, 1-10 for questions, 11 for results, 12 for leader
 var quiz = 0; // 0 for pokemon, 1 and 2 TBA
 var leaderBoard = [];// array which records results of tests since the start of program
 var answerArray =[];// array for storing answers during a test
-var index = 0;// index of an array, helps when shuffling the question array
+var index = 0;
 var questionArray = [1,2,3,4,5,6,7,8,9,10];//array for order of questions
 
 //objects
@@ -123,7 +123,7 @@ var scoreTest = function(){
 
 //the function for shuffling the order of the questions
 var shuffle = function(array){
-    if(array.length === 11){
+   if(array.length === 11){
         array.pop();
     }
 
@@ -153,7 +153,7 @@ var btnStart0 = new Button({
     label: "Pokémon Starter",
     onClick: function() {
         quiz = 0;
-        scene = index + 1; index++;
+        scene = questionArray[index];
     }
 });
 var btnStart1 = new Button({
@@ -162,7 +162,7 @@ var btnStart1 = new Button({
     label: "Pokémon Starter",
     onClick: function() {
         quiz = 1;
-        scene = index + 1; index++;
+        scene = questionArray[index];
     }
 });
 var btnStart2 = new Button({
@@ -171,7 +171,7 @@ var btnStart2 = new Button({
     label: "Pokémon Starter",
     onClick: function() {
         quiz = 2;
-        scene = index + 1; index++;
+        scene = questionArray[index];
     }
 });
 
@@ -196,21 +196,21 @@ var btnOneOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         
@@ -222,21 +222,21 @@ var btnOneTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -247,21 +247,21 @@ var btnOneThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -272,21 +272,21 @@ var btnOneFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -298,21 +298,21 @@ var btnTwoOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -323,21 +323,21 @@ var btnTwoTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -348,21 +348,21 @@ var btnTwoThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -373,21 +373,21 @@ var btnTwoFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -399,21 +399,21 @@ var btnThreeOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -424,21 +424,21 @@ var btnThreeTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -449,21 +449,21 @@ var btnThreeThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -474,21 +474,21 @@ var btnThreeFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -500,21 +500,21 @@ var btnFourOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -525,21 +525,21 @@ var btnFourTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -550,21 +550,21 @@ var btnFourThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -575,21 +575,21 @@ var btnFourFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -601,21 +601,21 @@ var btnFiveOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
          else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -626,21 +626,21 @@ var btnFiveTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -651,21 +651,21 @@ var btnFiveThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -676,21 +676,21 @@ var btnFiveFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -702,21 +702,21 @@ var btnSixOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -727,21 +727,21 @@ var btnSixTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -752,21 +752,21 @@ var btnSixThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -777,21 +777,21 @@ var btnSixFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -803,21 +803,21 @@ var btnSevenOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -828,21 +828,21 @@ var btnSevenTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -853,21 +853,21 @@ var btnSevenThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -878,21 +878,21 @@ var btnSevenFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -904,21 +904,21 @@ var btnEightOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -929,21 +929,21 @@ var btnEightTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -954,21 +954,21 @@ var btnEightThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -979,21 +979,21 @@ var btnEightFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -1005,21 +1005,21 @@ var btnNineOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -1030,21 +1030,21 @@ var btnNineTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -1055,21 +1055,21 @@ var btnNineThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -1080,21 +1080,21 @@ var btnNineFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -1106,21 +1106,21 @@ var btnTenOne = new Button({
     label: "           A",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(3);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -1131,20 +1131,20 @@ var btnTenTwo = new Button({
     label: "           B",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(4);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -1155,21 +1155,21 @@ var btnTenThree = new Button({
     label: "           C",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(1);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
@@ -1180,21 +1180,21 @@ var btnTenFour = new Button({
     label: "           D",
     onClick: function() {
         if(quiz === 0){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 1){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
         else if(quiz === 2){
-            if(scene===index){
+            if(scene===questionArray[index]){
                 answerArray.push(2);
-                scene = index + 1; index++;
+                scene = questionArray[index + 1]; index++;
             }
         }
     }
