@@ -39,6 +39,238 @@ Button.prototype.handleMouseClick = function() {
 };
 //functions
 
+//functions for drawing pokemon
+
+//Charmande
+var drawHeadCharmander=function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(255, 157, 0);//skin
+    ellipse(bitmojiX+r*50,bitmojiY+r*50,r*80,r*87);//head
+    arc(bitmojiX+r*50,bitmojiY+r*71,r*25,r*12,5,175);//mouth
+
+    fill (0,0,0);
+    ellipse(bitmojiX+r*35,bitmojiY+r*48,r*10,r*10);//left eye
+    ellipse(bitmojiX+r*65,bitmojiY+r*48,r*10,r*10);//right eye
+};
+var drawBodyCharmander= function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(255, 157, 0);//skin
+    triangle(bitmojiX+r*-9,bitmojiY+r*90,bitmojiX+r*10,bitmojiY+r*140,bitmojiX+r*24,bitmojiY+r*140);//tail
+    rect(bitmojiX+r*10, bitmojiY+r*90, r*80, r*80, r*25);//body
+    fill(255, 0, 0);
+    triangle(bitmojiX+r*-9,bitmojiY+r*74,bitmojiX+r*-18,bitmojiY+r*89,bitmojiX+r*-4,bitmojiY+r*90);//flame
+    
+
+};
+var drawCharmander= function(bitmojiX,bitmojiY,bitmojiH){
+    drawBodyCharmander(bitmojiX,bitmojiY,bitmojiH);
+    drawHeadCharmander(bitmojiX,bitmojiY,bitmojiH);
+};
+
+//Pikachu
+var drawHeadPikachu=function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(255, 251, 0);//fur
+    triangle(bitmojiX+r*11, bitmojiY+r*-15,bitmojiX+r*22, bitmojiY+r*24,bitmojiX+r*11, bitmojiY+r*42);//left ear
+    triangle(bitmojiX+r*89, bitmojiY+r*-15,bitmojiX+r*77, bitmojiY+r*24,bitmojiX+r*88, bitmojiY+r*42);//right ear
+    fill(74, 49, 2);// ear tips
+    triangle(bitmojiX+r*11, bitmojiY+r*-15,bitmojiX+r*15, bitmojiY+r*2,bitmojiX+r*11, bitmojiY+r*10);//left ear tip
+    triangle(bitmojiX+r*89, bitmojiY+r*-15,bitmojiX+r*84, bitmojiY+r*2,bitmojiX+r*88, bitmojiY+r*10);//right ear tip
+    fill(255, 251, 0);//fur
+    ellipse(bitmojiX+r*50,bitmojiY+r*50,r*80,r*80);//head
+    arc(bitmojiX+r*50,bitmojiY+r*71,r*25,r*12,5,175);//mouth
+    fill(255, 0, 0);//cheek color
+    ellipse(bitmojiX+r*30,bitmojiY+r*65,r*10,r*10);//left cheek
+    ellipse(bitmojiX+r*70,bitmojiY+r*65,r*10,r*10);//right cheek
+    fill (0,0,0);
+    ellipse(bitmojiX+r*35,bitmojiY+r*48,r*10,r*10);//left eye
+    ellipse(bitmojiX+r*65,bitmojiY+r*48,r*10,r*10);//right eye
+};
+var drawBodyPikachu= function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(255, 251, 0);//fur
+    triangle(bitmojiX+r*-30,bitmojiY+r*50,bitmojiX+r*1,bitmojiY+r*50,bitmojiX+r*24,bitmojiY+r*140);//tail
+    rect(bitmojiX+r*10, bitmojiY+r*90, r*80, r*80, r*25);//body
+
+};
+var drawPikachu= function(bitmojiX,bitmojiY,bitmojiH){
+    drawHeadPikachu(bitmojiX,bitmojiY,bitmojiH);
+    drawBodyPikachu(bitmojiX,bitmojiY,bitmojiH);
+};
+
+//Squirtle
+var drawHeadSquirtle=function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(118, 235, 237);//skin
+    ellipse(bitmojiX+r*50,bitmojiY+r*50,r*80,r*87);//head
+    arc(bitmojiX+r*50,bitmojiY+r*71,r*25,r*12,5,175);//mouth
+
+    fill (0,0,0);
+    ellipse(bitmojiX+r*35,bitmojiY+r*48,r*10,r*10);//left eye
+    ellipse(bitmojiX+r*65,bitmojiY+r*48,r*10,r*10);//right eye
+};
+var drawBodySquirtle= function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(118, 235, 237);//skin
+    triangle(bitmojiX+r*-30,bitmojiY+r*50,bitmojiX+r*1,bitmojiY+r*50,bitmojiX+r*24,bitmojiY+r*140);//tail
+    fill(140, 108, 21);//shell color
+    ellipse(bitmojiX+r*50,bitmojiY+r*126,r*89,r*94);//shell
+    fill(242, 242, 162);//skin
+    rect(bitmojiX+r*10, bitmojiY+r*90, r*80, r*80, r*25);//body
+    
+    
+
+};
+var drawSquirtle= function(bitmojiX,bitmojiY,bitmojiH){
+    drawBodySquirtle(bitmojiX,bitmojiY,bitmojiH);
+    drawHeadSquirtle(bitmojiX,bitmojiY,bitmojiH);
+};
+
+//Bulbasaur
+var drawHeadBulbasaur=function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(214, 255, 173);//skin
+    ellipse(bitmojiX+r*43,bitmojiY+r*50,r*80,r*80);//head
+    arc(bitmojiX+r*50,bitmojiY+r*71,r*25,r*12,5,175);//mouth
+    fill(181, 70, 70);//eye color
+    ellipse(bitmojiX+r*35,bitmojiY+r*48,r*15,r*15);//left eye
+    ellipse(bitmojiX+r*65,bitmojiY+r*48,r*15,r*15);//right eye
+};
+var drawBodyBulbasaur= function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(6, 94, 22);//bulb color
+    ellipse(bitmojiX+r*4,bitmojiY+r*38,r*80,r*80);//bulb
+    fill(214, 255, 173);//skin
+    rect(bitmojiX+r*-40, bitmojiY+r*40, r*80, r*75, r*25);//body
+    fill(0, 0, 0);
+};
+var drawBulbasaur= function(bitmojiX,bitmojiY,bitmojiH){
+    drawBodyBulbasaur(bitmojiX,bitmojiY,bitmojiH);
+    drawHeadBulbasaur(bitmojiX,bitmojiY,bitmojiH);
+};
+
+///quiz 2 GOLDEN GIRLS 
+// SP SOPHIA 
+var drawHeadSP=function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(249, 250, 237);//haircolor
+    rect(bitmojiX+r*5, bitmojiY+r*0, r*90, r*80, 62);//hair
+    fill(255,224,189);//skin
+    ellipse(bitmojiX+r*50,bitmojiY+r*50,r*80,r*80);//head
+    arc(bitmojiX+r*50,bitmojiY+r*71,r*25,r*-14,0,175);//mouth
+    arc(bitmojiX+r*35,bitmojiY+r*48,r*24,r*22,0,360);//left lens
+    arc(bitmojiX+r*65,bitmojiY+r*48,r*24,r*22,0,360);//right lens
+    line(bitmojiX+r*48,bitmojiY+r*48,bitmojiX+r*52,bitmojiY+r*48);//glassesbridge
+    line(bitmojiX+r*10,bitmojiY+r*48,bitmojiX+r*21,bitmojiY+r*48);//leftglasses
+    line(bitmojiX+r*78,bitmojiY+r*48,bitmojiX+r*89,bitmojiY+r*48);//rightglasses
+    fill (0,0,0);
+    ellipse(bitmojiX+r*35,bitmojiY+r*48,r*10,r*10);//left eye
+    ellipse(bitmojiX+r*65,bitmojiY+r*48,r*10,r*10);//right eye
+};
+var drawBodySP= function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(236, 181, 242);//shirtcolor
+    rect(bitmojiX+r*10, bitmojiY+r*90, r*80, r*50, r*20);//body
+    textSize(r*40);
+    fill(0, 0, 0);
+    text("SP",bitmojiX+r*23,bitmojiY+r*130);
+};
+var drawBitmojiSP= function(bitmojiX,bitmojiY,bitmojiH){
+    drawHeadSP(bitmojiX,bitmojiY,bitmojiH);
+    drawBodySP(bitmojiX,bitmojiY,bitmojiH);
+};
+drawBitmojiSP(0,17,82);
+
+// BLANCHE BD 
+var drawHeadBD=function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(107, 93, 53);//haircolor
+    rect(bitmojiX+r*7, bitmojiY+r*14, r*85, r*74, 100);//hair
+    fill(255,224,189);//skin
+    ellipse(bitmojiX+r*50,bitmojiY+r*50,r*80,r*80);//head
+    arc(bitmojiX+r*50,bitmojiY+r*71,r*25,r*9,0,175);//mouth
+    fill(107, 93, 53);//haircolor
+    arc(bitmojiX+r*90,bitmojiY+r*9,r*46,r*78,85,180);//righthair
+    arc(bitmojiX+r*10,bitmojiY+r*9,r*118,r*78,0,95);//lefthair
+    fill (0,0,0);
+    ellipse(bitmojiX+r*35,bitmojiY+r*48,r*10,r*10);//left eye
+    ellipse(bitmojiX+r*65,bitmojiY+r*48,r*10,r*10);//right eye
+};
+var drawBodyBD= function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(162, 0, 207);//shirtcolor
+    rect(bitmojiX+r*10, bitmojiY+r*90, r*80, r*50, r*20);//body
+    textSize(r*40);
+    fill(0, 0, 0);
+    text("BD",bitmojiX+r*21,bitmojiY+r*130);
+};
+var drawBitmojiBD= function(bitmojiX,bitmojiY,bitmojiH){
+    drawHeadBD(bitmojiX,bitmojiY,bitmojiH);
+    drawBodyBD(bitmojiX,bitmojiY,bitmojiH);
+};
+drawBitmojiBD(0,0,82);
+
+/// DORTHY DZ
+var drawHeadDZ=function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(150, 150, 150);//haircolor
+    rect(bitmojiX+r*10, bitmojiY+r*38, r*80, r*50, 89);//hair
+    fill(255,224,189);//skin
+    ellipse(bitmojiX+r*50,bitmojiY+r*50,r*80,r*80);//head
+    arc(bitmojiX+r*50,bitmojiY+r*71,r*25,r*9,0,175);//mouth
+
+    fill(150, 150, 150);//haircolor
+    arc(bitmojiX+r*90,bitmojiY+r*9,r*80,r*78,85,180);//righthair
+    arc(bitmojiX+r*10,bitmojiY+r*9,r*80,r*78,0,95);//lefthair
+    fill (0,0,0);
+    ellipse(bitmojiX+r*35,bitmojiY+r*48,r*10,r*10);//left eye
+    ellipse(bitmojiX+r*65,bitmojiY+r*48,r*10,r*10);//right eye
+};
+var drawBodyDZ= function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(84, 72, 120);//shirtcolor
+    rect(bitmojiX+r*10, bitmojiY+r*90, r*80, r*50, r*20);//body
+    textSize(r*40);
+    fill(0, 0, 0);
+    text("DZ",bitmojiX+r*23,bitmojiY+r*130);
+};
+var drawBitmojiDZ= function(bitmojiX,bitmojiY,bitmojiH){
+    drawHeadDZ(bitmojiX,bitmojiY,bitmojiH);
+    drawBodyDZ(bitmojiX,bitmojiY,bitmojiH);
+};
+drawBitmojiDZ(0,0,82);
+
+/// ROSE RN
+var drawHeadRN=function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(242, 247, 195);//haircolor
+    rect(bitmojiX+r*10, bitmojiY+r*38, r*80, r*50, 20);//hair
+    fill(255,224,189);//skin
+    ellipse(bitmojiX+r*50,bitmojiY+r*50,r*80,r*80);//head
+    arc(bitmojiX+r*50,bitmojiY+r*71,r*25,r*9,0,175);//mouth
+    fill(242, 247, 195);//haircolor
+    arc(bitmojiX+r*90,bitmojiY+r*9,r*80,r*78,85,180);//righthair
+    arc(bitmojiX+r*10,bitmojiY+r*9,r*80,r*78,0,95);//lefthair
+    fill (0,0,0);
+    ellipse(bitmojiX+r*35,bitmojiY+r*48,r*10,r*10);//left eye
+    ellipse(bitmojiX+r*65,bitmojiY+r*48,r*10,r*10);//right eye
+};
+var drawBodyRN= function(bitmojiX,bitmojiY,bitmojiH){
+    var r = bitmojiH/80; 
+    fill(140, 240, 255);//shirtcolor
+    rect(bitmojiX+r*10, bitmojiY+r*90, r*80, r*50, r*20);//body
+    textSize(r*40);
+    fill(0, 0, 0);
+    text("RN",bitmojiX+r*21,bitmojiY+r*130);
+};
+var drawBitmojiRN= function(bitmojiX,bitmojiY,bitmojiH){
+    drawHeadRN(bitmojiX,bitmojiY,bitmojiH);
+    drawBodyRN(bitmojiX,bitmojiY,bitmojiH);
+};
+drawBitmojiRN(0,0,82);
+
+
+
 //functions for Jared's Bitmoji
 var drawHeadJared=function(bitmojiX,bitmojiY,bitmojiH){
     var r = bitmojiH/80; 
@@ -78,6 +310,85 @@ var drawBitmojiJared= function(bitmojiX,bitmojiY,bitmojiH){
     drawHeadJared(bitmojiX,bitmojiY,bitmojiH);
     drawBodyJared(bitmojiX,bitmojiY,bitmojiH);
 };
+
+//function for Damien's Bitmoji 
+var drawBitmojiHead = function(bitmojiX, bitmojiY,meHeight){
+    
+ fill(255, 255, 255);
+fill(175, 110, 34); //skin tone
+ellipse(bitmojiX +132*(meHeight/100),bitmojiY-6*(meHeight/100), 77*(meHeight/100), 75*(meHeight/100)); // head
+fill(255,255, 255);
+arc(bitmojiX + 110*(meHeight/100),bitmojiY+24*(meHeight/100),28*(meHeight/100), 55*(meHeight/100), 0,361); //left chin
+arc(bitmojiX + 160*(meHeight/100),bitmojiY+24*(meHeight/100),28*(meHeight/100), 55*(meHeight/100), 0,361); //right chin
+fill(8, 8, 8);
+arc(bitmojiX +134 *(meHeight/100) ,bitmojiY+24*(meHeight/100),20*(meHeight/100), 12*(meHeight/100), 1,180);//chin hair
+
+ellipse(bitmojiX +133*(meHeight/100),bitmojiY-35*(meHeight/100), 37*(meHeight/100), 22*(meHeight/100));// middle hat 1
+ellipse(bitmojiX+160*(meHeight/100),bitmojiY-40*(meHeight/100), 36*(meHeight/100), 13*(meHeight/100));// middle hat 2
+
+
+fill(128,128,128);//brim
+
+rect(bitmojiX+128*(meHeight/100),bitmojiY-28*(meHeight/100),14*(meHeight/100), 6*(meHeight/100)); //hat strap
+
+fill(225, 225, 225);
+ellipse(bitmojiX+121*(meHeight/100),bitmojiY-13*(meHeight/100),17*(meHeight/100),15*(meHeight/100));// left glasses 1
+ellipse(bitmojiX+147*(meHeight/100),bitmojiY-12*(meHeight/100),17*(meHeight/100),15*(meHeight/100));//right glaases 1
+rect(bitmojiX +153*(meHeight/100),bitmojiY-14*(meHeight/100),9*(meHeight/100),4*(meHeight/100));// left glass on ears
+rect(bitmojiX+105*(meHeight/100),bitmojiY-15*(meHeight/100),20*(meHeight/100),4*(meHeight/100));//right glass on ears
+
+rect(bitmojiX+128*(meHeight/100),bitmojiY-15*(meHeight/100),16*(meHeight/100),4*(meHeight/100));// eye glass bridge
+fill(175, 110, 34); //skin tone in eyes
+ellipse(bitmojiX+121*(meHeight/100),bitmojiY-13*(meHeight/100),10*(meHeight/100),10*(meHeight/100)); //left glass 2
+ellipse(bitmojiX+147*(meHeight/100),bitmojiY-12*(meHeight/100),10*(meHeight/100),10*(meHeight/100));//right glasses 2
+rect(bitmojiX+129 *(meHeight/100),bitmojiY-27*(meHeight/100),13*(meHeight/100),-4*(meHeight/100));// forhead
+
+fill(8, 8, 8);
+ellipse(bitmojiX+148*(meHeight/100),bitmojiY-11*(meHeight/100),6*(meHeight/100),6*(meHeight/100));// eyes
+ellipse(bitmojiX+122*(meHeight/100),bitmojiY-12*(meHeight/100),6*(meHeight/100),6*(meHeight/100));//eyes
+
+bezier(bitmojiX+144 *(meHeight/100)  ,bitmojiY+3*(meHeight/100),bitmojiX + 131*(meHeight/100) ,bitmojiY+3*(meHeight/100)  ,bitmojiX +130*(meHeight/100),  bitmojiY-28*(meHeight/100),bitmojiX+124 *(meHeight/100), bitmojiY+4*(meHeight/100) ); // nose back ground 
+fill(175, 110, 34); //skin tone
+bezier(bitmojiX+136*(meHeight/100) ,bitmojiY-1*(meHeight/100),bitmojiX + 131*(meHeight/100) ,bitmojiY+12*(meHeight/100)  ,bitmojiX +132*(meHeight/100),  bitmojiY-32*(meHeight/100),bitmojiX+124 *(meHeight/100), bitmojiY+4 *(meHeight/100) ); // nose back ground  // nose back ground // nose skin color 
+
+fill(255,255,255);
+
+arc(bitmojiX +132 *(meHeight/100), bitmojiY+12*(meHeight/100), 14*(meHeight/100),15*(meHeight/100) ,3,180); // smile 
+
+}; 
+var drawBitmojiBody = function(bitmojiX, bitmojiY,meHeight){
+
+fill(8,8,8);
+arc(bitmojiX+133*(meHeight/100), bitmojiY+55*(meHeight/100), 102*(meHeight/100),45*(meHeight/100),180,360); //sholders / shirt
+rect(bitmojiX+82*(meHeight/100),bitmojiY +54*(meHeight/100),102 *(meHeight/100),50*(meHeight/100));// bottome of shirt 
+
+fill(175, 110, 34);
+arc(bitmojiX+135*(meHeight/100),bitmojiY+30*(meHeight/100),24*(meHeight/100), 18*(meHeight/100), -20,201);//neck1
+//rect(bitmojiX - 16 ,bitmojiY +70,31,17);//neck 2
+triangle(bitmojiX +136 *(meHeight/100) ,bitmojiY +58*(meHeight/100),bitmojiX+147*(meHeight/100),bitmojiY +32*(meHeight/100),bitmojiX+122*(meHeight/100),bitmojiY+37*(meHeight/100));//neck 2
+
+fill(255, 255, 255);
+
+rect(bitmojiX+100*(meHeight/100),bitmojiY + 61*(meHeight/100),6*(meHeight/100),45*(meHeight/100));// D shirt
+rect(bitmojiX+106*(meHeight/100),bitmojiY+64*(meHeight/100),6*(meHeight/100),10*(meHeight/100));// D shirt
+rect(bitmojiX+112*(meHeight/100),bitmojiY +72*(meHeight/100),6*(meHeight/100),10*(meHeight/100));// D shirt
+rect(bitmojiX+113*(meHeight/100),bitmojiY +82*(meHeight/100),6*(meHeight/100),10*(meHeight/100));// D shirt
+rect(bitmojiX+109*(meHeight/100),bitmojiY+92*(meHeight/100),6*(meHeight/100),10*(meHeight/100));// D shirt
+rect(bitmojiX+106*(meHeight/100),bitmojiY+96*(meHeight/100),6*(meHeight/100),10*(meHeight/100));// D shirt
+
+rect(bitmojiX + 175*(meHeight/100),bitmojiY +61*(meHeight/100),-29*(meHeight/100),8*(meHeight/100));// J shirt
+rect(bitmojiX+164*(meHeight/100),bitmojiY+66*(meHeight/100),-7*(meHeight/100),26*(meHeight/100));// J shirt
+rect(bitmojiX+154*(meHeight/100),bitmojiY+87*(meHeight/100),6*(meHeight/100),10*(meHeight/100));// J shirt
+rect(bitmojiX+149*(meHeight/100),bitmojiY+88*(meHeight/100),6*(meHeight/100),10*(meHeight/100));// J shirt
+
+};
+var realme =function (bitmojiX,bitmojiY,meHeight){ 
+  drawBitmojiHead(bitmojiX,bitmojiY,meHeight);
+   drawBitmojiBody(bitmojiX,bitmojiY,meHeight);
+  
+};
+
+
 
 //this function is used in the scoring functions to select the result
 //it finds the position of the element of the array with the highest value
@@ -159,7 +470,7 @@ var btnStart0 = new Button({
 var btnStart1 = new Button({
     x: 124,
     y: 222,
-    label: "Pokémon Starter",
+    label: "Golden Girls",
     onClick: function() {
         quiz = 1;
         scene = questionArray[index];
@@ -870,8 +1181,7 @@ var btnSevenThree = new Button({
                 scene = questionArray[index + 1]; index++;
             }
         }
-    }
-});
+    }});
 var btnSevenFour = new Button({
     x: 201,
     y: 262,
@@ -1204,7 +1514,9 @@ var btnTenFour = new Button({
 var splash = function(){
     background(130, 225, 255);
     
+    //Bitmoji Charcter 
     drawBitmojiJared(22,190,60);
+    realme(244,231,65);
    
     textSize(25);
     text("Fun Personality Tests", 80,20);
@@ -1221,63 +1533,72 @@ var splash = function(){
 var results = function(){
     background(130, 225, 255);
     textSize(25);
-    text("Results", 80,135);
+    text("Results", 80,30);
     btnMainMenu.draw();
     textSize(25);
     
     if(scoreTest(answerArray) === 0){
         if(quiz === 0){
-            text("Charmander", 135,200);
+            drawCharmander(150,100,80);
+            text("Charmander", 130,300);
             leaderBoard.push("Charmander");
         }
         else if(quiz === 1){
-            text("Charmander", 135,200);
-            leaderBoard.push("Charmander");
+            drawBitmojiSP(150,100,80);
+            text("SOPHIA", 130,300);
+            leaderBoard.push("SOPHIA");
         }
         else if(quiz === 2){
-            text("Charmander", 135,200);
+            text("Charmander", 130,300);
             leaderBoard.push("Charmander");
         }
     }
     else if(scoreTest(answerArray) === 1){
         if(quiz === 0){
-            text("Pikachu", 135,200);
+            drawPikachu(150, 100, 80);
+            text("Pikachu", 130,300);
             leaderBoard.push("Pikachu");
         }
         else if(quiz === 1){
-            text("Pikachu", 135,200);
-            leaderBoard.push("Pikachu");
+            drawBitmojiBD(150, 100, 80);
+            text("BLANCHE", 130,300);
+            leaderBoard.push("BLANCHE");
         }
         else if(quiz === 2){
-            text("Pikachu", 135,200);
+            text("Pikachu", 130,300);
             leaderBoard.push("Pikachu");
         }
     }
     else if(scoreTest(answerArray) === 2){
         if(quiz === 0){
-            text("Squirtle", 135,200);
+            drawSquirtle(150, 100, 80);
+            text("Squirtle", 130,300);
             leaderBoard.push("Squirtle");
         }
         else if(quiz === 1){
-            text("Squirtle", 135,200);
-            leaderBoard.push("Squirtle");
+            drawBitmojiDZ(150, 100, 80);
+            text("DORTHY", 130,300);
+            leaderBoard.push("DORTHY");
         }
         else if(quiz === 2){
-            text("Squirtle", 135,200);
+            text("Squirtle", 130,300);
             leaderBoard.push("Squirtle");
         }
     }
     else if(scoreTest(answerArray) === 3){
         if(quiz === 0){
-             text("Bulbasaur", 135,200);
+             drawBulbasaur(172,136,89);
+             fill(0, 0, 0);
+             text("Bulbasaur", 130,300);
              leaderBoard.push("Bulbasaur");
         }
         else if(quiz === 1){
-             text("Bulbasaur", 135,200);
-             leaderBoard.push("Bulbasaur");
+            drawBitmojiRN(150, 100, 80);
+             text("ROSE", 130,300);
+             leaderBoard.push("ROSE");
         }
         else if(quiz === 2){
-             text("Bulbasaur", 135,200);
+             text("Bulbasaur", 130,300);
              leaderBoard.push("Bulbasaur");
         }
     }
@@ -1326,12 +1647,12 @@ var questionTwo = function(){
     }
     else if (quiz === 1){
         textSize(16);
-        text("Would you rather live on an island that always...", 50,25);
+        text("Pick a Movie...", 50,25);
         textSize(25);
-        text("A: Has wildfires", 65,65);
-        text("B: Floods", 65,95);
-        text("C: Has earthquakes", 65,125);
-        text("D: Has lightning storms", 65,155);
+        text("A: Steel Magnolias ", 65,65);
+        text("B: Magic M", 65,95);
+        text("C: Star Wars", 65,125);
+        text("D: The Lorax", 65,155);
     }
     else if (quiz === 2){
         textSize(16);
@@ -1360,12 +1681,12 @@ var questionThree = function(){
     }
     else if( quiz === 1){
         textSize(22);
-        text("Which movement do you prefer?", 50,25);
+        text("Which is most fun to you?", 50,25);
         textSize(25);
-        text("A: Swinging", 65,65);
-        text("B: Walking", 65,95);
-        text("C: Swimming", 65,125);
-        text("D: Flying", 65,155);
+        text("A: Gossip", 65,65);
+        text("B: Going on dates ", 65,95);
+        text("C: Reading", 65,125);
+        text("D: Listening to Music", 65,155);
     }
     else if( quiz === 2){
         textSize(22);
@@ -1394,12 +1715,12 @@ var questionFour = function(){
     }
     else if( quiz === 1){
         textSize(18);
-        text("Which nature thing do you like more?", 50,25);
+        text("What is your role in a friend group?", 50,25);
         textSize(25);
-        text("A: Flowers", 65,65);
-        text("B: Marine life", 65,95);
-        text("C: Volcanoes", 65,125);
-        text("D: I prefer technology", 65,155);
+        text("A: The sassy one", 65,65);
+        text("B: The wild card", 65,95);
+        text("C: The leader ", 65,125);
+        text("D: The jokester", 65,155);
     }
     else if( quiz === 2){
         textSize(18);
@@ -1427,11 +1748,11 @@ var questionFive = function(){
     }
     else if(quiz === 1){
         textSize(25);
-        text("Choose a character", 50,25);
-        text("A: Ash Ketchum", 65,65);
-        text("B: Brock", 65,95);
-        text("C: Misty", 65,125);
-        text("D: Dawn", 65,155);
+        text("Pick a book", 50,25);
+        text("A: The Catcher in the Rye", 65,65);
+        text("B: 50 Shades of Gray", 65,95);
+        text("C: The Great Gatsby", 65,125);
+        text("D: The Cat in the Hat", 65,155);
     }
     else if(quiz === 2){
         textSize(25);
@@ -1458,11 +1779,11 @@ var questionSix = function(){
     }
     else if( quiz === 1){
         textSize(25);
-        text("How do you like to play?", 50,25);
-        text("A: In the rain", 65,65);
-        text("B: In a field", 65,95);
-        text("C: In the snow", 65,125);
-        text("D: Indoors", 65,155);
+        text("Pick a song", 50,25);
+        text("A: Big Iron by Marty Robbins", 65,65);
+        text("B: Montero (Call Me By Your Name) by Lil Nas X", 65,95);
+        text("C: Killer Queen by Queen ", 65,125);
+        text("D: Anything Weird Al made", 65,155);
     }
     else if( quiz === 2){
         textSize(25);
@@ -1489,11 +1810,11 @@ var questionSeven = function(){
     }
     else if(quiz === 1){
         textSize(25);
-        text("Choose a dessert", 50,25);
-        text("A: Cake", 65,65);
-        text("B: Brownies", 65,95);
-        text("C: Cookies", 65,125);
-        text("D: Macrons", 65,155);
+        text("Choose a game", 50,25);
+        text("A: Poker", 65,65);
+        text("B: Twister", 65,95);
+        text("C: Scrabble", 65,125);
+        text("D: Uno", 65,155);
     }
     else if(quiz === 2){
         textSize(25);
@@ -1520,11 +1841,11 @@ var questionEight = function(){
     }
     else if(quiz === 1){
         textSize(25);
-        text("Choose a sport", 50,25);
-        text("A: American Football", 65,65);
-        text("B: Basketball", 65,95);
-        text("C: Soccer", 65,125);
-        text("D: Hockey", 65,155);
+        text("What room would you be drawn to at a house party?", 50,25);
+        text("A:  kitchen", 65,65);
+        text("B: Wherever the most people are", 65,95);
+        text("C: quietest room", 65,125);
+        text("D: Whatever room your friend is in", 65,155);
     }
     else if(quiz === 2){
         textSize(25);
@@ -1582,11 +1903,11 @@ var questionTen = function(){
     }
     else if(quiz === 1){
         textSize(25);
-        text("Choose a pet", 50,25);
-        text("A: Turtle", 65,65);
-        text("B: Toad", 65,95);
-        text("C: Lizard", 65,125);
-        text("D: Rat", 65,155);
+        text("How introverted or extroverted are you?", 50,25);
+        text("A: Extrovert/ introvert tendencies", 65,65);
+        text("B: Hard extrovert", 65,95);
+        text("C: Hard introvert", 65,125);
+        text("D: Introvert with extrovert tendencies", 65,155);
     }
     else if(quiz === 2){
         textSize(25);
